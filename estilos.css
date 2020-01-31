@@ -1,0 +1,247 @@
+/*-----------Estilos Generales------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+    font-family: 'Solway', serif;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+}
+
+/* ------------ Header ------------- */
+
+
+header {
+	padding: 40px 0;
+}
+
+header .logo {
+	text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+header .logo h1{
+    color: #000000;
+    font-weight: bolder;
+    font-size: 35px;
+}
+header .logo p {
+    color: #706c61;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 21px;
+
+    
+}
+
+header form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 18px;
+	font-family: 'Solway', serif;
+}
+
+header .barra-busqueda {
+	width: 70%;
+	height: 40px;
+	line-height: 40px;
+	background: #f9fcfb;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Solway', serif;;
+	font-weight:200;
+    
+}
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: #7fa998;
+	margin: 10px 20px;
+	font-size: 18px;
+    font-weight: 700;
+    
+}
+
+header .categorias a.activo {
+    color: #333333;
+    background: #f1f1b0;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* ---------- Grid --------------- */
+
+
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(33.333333% - 20px);
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+	width: 100%;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+
+/*-----Overlay------*/
+.overlay{
+	position: fixed; /*Para que la venta que se abre este en medio y fijo*/
+	top:0;
+	bottom: 0;
+	left:0;
+	right:0;
+	background: rgba(0,0,0,.9);
+	width:100%;
+	height: 100vh;
+	display:none;
+	align-items :center;
+	justify-content:center;
+	flex-direction: column; /*Para que el texto este abajo de la imagen*/
+}
+
+.overlay.activo{
+	display:flex;
+}
+
+.overlay img{
+	max-width: 100%;
+	}
+
+.overlay .descripcion {
+	display:block;
+	background: #f6eec7;
+	color: #1b262c;
+	padding:10px;
+	margin-top:5px;
+	font-family: 'Solway', serif;;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 10px;
+	max-width: 50%;
+}
+
+.contenedor-img{
+	position:relative;
+}
+
+.overlay #btn-cerrar-popup{
+	background: none;
+	font-sizing:20px;
+	color:#fff;
+	border: none;
+	cursor: pointer;
+	position:absolute;
+	right:-20px;
+	top:-20px;
+}
+	
+footer .redes-sociales{
+ display: flex;
+ align-content: center;
+ justify-content: center;
+ padding: 20px;
+ flex-wrap: wrap; /*Acomoda los iconos cuando no entra*/
+ 
+}
+
+footer .redes-sociales a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #000;
+	color: #fff;
+	margin: 20px;
+	text-align: center;
+	border-radius: 100px;
+	transition: .3s ease all;
+}
+
+footer .redes-sociales  .gitHub{ background: #5d5b6a;}
+footer .redes-sociales  .gmail{ background: #e32249;}
+
+footer .redes-sociales a i{
+
+	font-size: 20px;
+	line-height: 60px;
+}
+
+footer .contenedor-icono:hover a{
+	animation: icono .5s ease;
+}
+
+@keyframes icono {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,0, 360deg);
+	}
+}
+
+footer .creado-por {
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 15px;
+	color: #c13584;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	
+
+}
+
+
+footer .creado-por a {color: #333333;}
+footer .creado-por a:hover {text-decoration: underline;}
+
+/*-------Media ----------*/
+@media screen and (max-width: 700px) {
+	.grid .item {
+		width: calc(50% - 20px);
+	}
+
+	header .barra-busqueda {
+		width: 100%;
+	}
+}

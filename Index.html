@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Link Estilo Font-->
+    <link href="https://fonts.googleapis.com/css?family=Solway:700|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!--Fontwesome-->
+     <script src="https://kit.fontawesome.com/2326cb3f10.js" crossorigin="anonymous"></script>
+    <!--Link Estilos Css-->
+    <link rel="stylesheet" href="estilos.css">
+    <title>Portafolio Dinamico</title>
+
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <h1>Cantarini María Sol</h1>
+                <p>Programmer</p>
+            </div>
+            <!--Formulario para la barra de busqueda-->
+            <form action="">
+                <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+            </form>
+            <!--Catagorías-->
+            <div class="categorias" id="categorias">
+                <a href="#" class="activo">Todos</a>
+                <a href="#">Naturaleza</a>
+                <a href="#">Ciudades</a>
+                <a href="#">Personas</a>
+                <a href="#">Animales</a>
+            </div>
+        </header>
+
+         <!--Grid-->
+        <section class="grid" id="grid">
+            <div class="item" 
+                 data-categoria="ciudades"
+                 data-etiquetas="ciudades auto carros calles "
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+                
+               <div class="item-contenido">
+                 <img src="Imagen/ciudad1.png" alt="Ciudad1" >
+               </div>
+            </div>
+
+            <div class="item" 
+                data-categoria="personas"
+                data-etiquetas="personas caras ojos pelo mujer "
+                data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+                <img src="Imagen/persona1.png" alt="Persona1">
+             </div>
+
+        
+        </div>
+
+          <div class="item" 
+               data-categoria="paisajes"
+               data-etiquetas="arboles auto relax mar montañas sol nubes "
+               data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/paisaje1.png" alt="Paisaje1">
+            </div>
+
+          </div>
+
+            <div class="item" 
+                 data-categoria="animales"
+                 data-etiquetas="leon animales carnivoro "
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/animal1.png" alt="Animal1">
+            </div>
+
+           </div>
+            <div class="item" 
+                 data-categoria="animales"
+                 data-etiquetas="oso panda animales hervivoro "
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/animal2.png" alt="Animal2">
+            </div>
+
+            </div>
+            
+            <div class="item" 
+                 data-categoria="personas"
+                 data-etiquetas="mujer azul pelo ojos personas "
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/persona2.png" alt="Persona2">
+            </div>
+
+            </div>
+
+            <div class="item" 
+                data-categoria="paisaje"
+                 data-etiquetas="mar montaña nubes "
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/paisaje2.png" alt="Paisaje2">
+            </div>
+
+            </div>
+
+            <div class="item" 
+                 data-categoria="ciudades"
+                 data-etiquetas="edificios autos luces puente ciudad ciudades"
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/ciudad2.png" alt="Ciudad2">
+            </div>
+
+            </div>
+
+            <div class="item" 
+                 data-categoria="naturaleza"
+                 data-etiquetas="naturaleza hojas verde planta"
+                 data-descripcion="1.Lorem ipsum dolor sit amet.">
+
+            <div class="item-contenido">
+               <img src="Imagen/naturaleza1.png" alt="Naturaleza1">
+            </div>
+
+            </dir>
+        </div>
+      </section>
+
+    
+        <!--Overlay-->
+
+       <section class="overlay" id="overlay">
+          <div class="contenedor-img">
+            <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+            <img src="" alt="">
+          </div>
+             <p class="descripcion">1.Lorem ipsum dolor sit amet.</p>
+       </section>
+
+        <footer>
+         <div class="redes-sociales">
+            <div class="contenedor-icono">
+                <a href="https://github.com/cantariniSol" target="_black" class="gitHub">
+                <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <div class="contenedor-icono">
+                <a href="mailto:cantarinisol@gmail.com" target="_black" class="gmail">
+                <i class="far fa-envelope"></i>
+                </a>
+            </div>
+
+         </div>
+
+         <div class="creado-por">
+             <p> Sitio diseñado por <a href='#'> Cantarini Maria Sol </a> - 2020</p>
+         </div>
+
+        </footer>
+
+    </div> 
+
+    <!--Main JS-->
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+     <script src="main.js"></script>
+</body>
+</html>
